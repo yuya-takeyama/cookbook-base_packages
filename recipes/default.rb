@@ -6,3 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+%w{gcc make git libreadline-dev libreadline5 language-pack-ja-base language-pack-ja nkf}.each do |pkg|
+  package pkg do
+    action :install
+  end.run_action(:install)
+end
