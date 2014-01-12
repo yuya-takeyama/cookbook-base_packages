@@ -8,6 +8,6 @@
 #
 %w{gcc make git git-flow tig vim tmux screen libreadline-dev libreadline5 language-pack-ja-base language-pack-ja nkf}.each do |pkg|
   package pkg do
-    action :install
+    action [:install, :upgrade]
   end
 end
